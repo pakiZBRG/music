@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Custom Music Player</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- FONT AWSOME -->
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+      <!-- GOOGLE FONTS -->
+      <link href="https://fonts.googleapis.com/css?family=Varela+Round|Acme|Alata&display=swap" rel="stylesheet">
+      <!-- FAVICON -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/site.webmanifest">
+      <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+
+   <body>
+      <div class="bg">
+         <div class="overlay"></div>
+         <img src="media/1.jpg"/>
+      </div>
+
+      <input type='chekbox' class='toggler'>
+      <div class='hamburger'>
+         <div id='line'></div>
+      </div>
+
+     <div class="main">
+         <img src="media/1.jpg"/>
+     </div>
+     
+     <div class="player">
+        <div class='container'>
+            <div id="song-author"></div>
+            <div id="song-title"></div>
+            
+            <div class="progress-bar" id='progress'>
+               <div id="fill"></div>
+               <div id="handle"></div>
+               <div id="currentTime"></div>
+            </div>
+
+            <div class="buttons">
+               <button id="pre">
+                  <img src='media/previous.png'>
+               </button>
+               <button id="play">
+                  <img src='media/pause.png'>
+               </button>
+               <button id="next">
+                  <img src='media/next.png'>
+               </button>
+               <button id="replay">
+                  <img src='media/repeat.png'></img>
+               </button>
+            </div>
+         </div>    
+      </div>
+
+      <script src = 'main.js'></script>   
+      <script src = 'https://code.jquery.com/jquery-3.4.1.js'></script> 
+   </body>
+</html>

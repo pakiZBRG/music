@@ -1,0 +1,230 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Varela Round'
+}
+
+*{
+   user-select: none;
+}
+
+.bg {
+   height: 100vh;
+   width: 100%;
+   position: absolute;
+   overflow: hidden;
+}
+
+.bg img {
+   height: 110vh;
+   width: 102%;
+   filter: blur(5px);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.overlay {
+   height: 100vh;
+   width: 100%;
+   background-color: rgba(0,0,0, .35);
+   position: absolute;
+   z-index: 3;
+}
+
+.main {
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   z-index: 999;
+}
+
+.main img {
+   height: 20vw;
+   object-fit: cover;
+   border: 1px solid #dcdcdc;
+}
+
+.player {
+   color:#333;
+   z-index: 10;
+   position: absolute;
+   width: 100%;
+   bottom: 0%;left: 0;
+}
+
+.container {
+   background: rgba(75,0,130, .55);
+   position: relative;
+   padding-bottom: 15px;
+   padding-top: 100px;
+}
+
+#song-title {
+   position: absolute;
+   font-family: 'Alata';
+   top: 8%;
+   left: 50%;
+   transform: translate(-50%, 0%);
+   color: #dcdcdc;
+   font-size: 1.4rem;
+   z-index: 11;
+   color: #dcdcdc;
+}
+
+#song-author{
+   position: absolute;
+   font-style: italic;
+   font-family: 'Alata';
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%, 0%);
+   color: #dcdcdc;
+   font-size: 1.1rem;
+   z-index: 11;
+   color: #dcdcdc;
+}
+
+.buttons {
+   width: 45%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+}
+
+#pre, #next {
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   transition: .5s;
+   background: transparent
+}
+
+#pre img, #next img{height: 2rem; transition: 1s; }
+
+#pre:hover, #next:hover, #play:hover{
+   opacity: .5;
+}
+
+#play {
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   transition: .5s;
+}
+
+#play img{ 
+   width: 2.1rem;
+}
+
+#replay{
+   background: transparent;
+   border: none;
+   border-radius: 50%;
+   padding: 0px 3px;
+   transition: .3s;
+}
+
+#replay img {
+   height: 2rem; 
+   cursor: pointer; 
+   transition: .8s;
+   background: transparent;
+}
+
+#replay img:hover{transform: rotateZ(-200deg);}
+
+button{
+   outline: none;
+}
+
+.progress-bar {
+   width: 85%;
+   height: 3px;
+   background-color: #a5a5a5;
+   display: flex;
+   position: relative;
+   bottom: 10px;
+   left: 50%;
+   transform: translate(-50%, 0);
+   cursor: pointer;
+}
+
+#fill {
+   height: 3px;
+   background:#333;
+}
+
+#handle {
+   width: 5px;
+   height: 5px;
+   background: rgb(58, 58, 58);
+   border-radius: 50%;
+   margin-top: -1.5px;
+   margin-left: -2.5px;
+   transform: scale(0);
+   transition: 600ms;
+}
+
+.progress-bar:hover #handle{
+   transform: scale(2);
+}
+
+#currentTime {
+   color: #dcdcdc;
+   margin-top: -25px;
+   position: absolute;
+}
+
+.hamburger {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   background: rgba(75,0,130, .55);
+   height: 50px;
+   width: 60px;
+   z-index: 11;
+   cursor: pointer;
+}
+
+#line {
+   position: relative;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   height: 2px;
+   width: 35px;
+   background: #fff;
+}
+
+#line::after, #line::before{
+   content: '';
+   position: absolute;
+   top: -10px;
+   height: 2px;
+   width: 35px;
+   background: #fff;
+}
+
+#line::before{top: 10px;}
+
+.toggler{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   z-index: 2;
+   cursor: pointer;
+   width: 60px;
+   height: 50px;
+   opacity: 0;
+}
+
+.toggler:checked + .hamburger > #line::before,
+.toggler:checked + .hamburger > #line::after {
+  top: 0;
+  transform: rotate(90deg);
+}
