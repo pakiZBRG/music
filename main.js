@@ -35,6 +35,7 @@ document.getElementById('next').addEventListener('click', nextSong);
 document.getElementById('pre').addEventListener('click', preSong);
 document.getElementById('play').addEventListener('click', playOrPause);
 document.getElementById('replay').addEventListener('click', replaySong);
+document.getElementById('random').addEventListener('click', randomSong);
 document.getElementById('progress').addEventListener('click', updateBar);
 
 let currentSong = 0;
@@ -62,6 +63,9 @@ document.onkeydown = function(e) {
     if(e.keyCode == '82'){
         replaySong()
     }
+    if(e.keyCode == '84'){
+        randomSong()
+    }
 };
 
 const song = new Audio();
@@ -82,6 +86,18 @@ function replaySong(){
         replay = false;
         song.loop = false;
         $('#replay').css('background', "transparent")
+    }
+}
+
+let random = false;
+function randomSong(){
+    if(random == false){
+        random = true;       
+        $('#random').css({'background':"rgba(255, 255 ,255, .65)"})
+    } 
+    else if(random == true){
+        random = false;
+        $('#random').css('background', "transparent")
     }
 }
 
@@ -135,6 +151,10 @@ function nextSong(){
     currentSong++;
     if(currentSong >= songs.length){        
         currentSong = 0;
+    }
+
+    if(random === true){
+        currentSong = Math.floor(Math.random() * songs.length);     
     }
 
     playSong();

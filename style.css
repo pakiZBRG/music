@@ -38,7 +38,7 @@ body {
    top: 40%;
    left: 50%;
    transform: translate(-50%,-50%);
-   z-index: 999;
+   z-index: 4;
 }
 
 .main img {
@@ -56,7 +56,7 @@ body {
 }
 
 .container {
-   background: rgba(75,0,130, .55);
+   background: rgba(75,0,130, .65);
    position: relative;
    padding-bottom: 15px;
    padding-top: 100px;
@@ -65,7 +65,7 @@ body {
 #song-title {
    position: absolute;
    font-family: 'Alata';
-   top: 8%;
+   top: 2%;
    left: 50%;
    transform: translate(-50%, 0%);
    color: #dcdcdc;
@@ -78,9 +78,9 @@ body {
    position: absolute;
    font-style: italic;
    font-family: 'Alata';
-   top: 30%;
-   left: 50%;
-   transform: translate(-50%, 0%);
+   top: 23%;
+   width: 100%;
+   text-align: center;
    color: #dcdcdc;
    font-size: 1.1rem;
    z-index: 11;
@@ -88,7 +88,7 @@ body {
 }
 
 .buttons {
-   width: 45%;
+   width: 55%;
    margin: 0 auto;
    display: flex;
    justify-content: space-around;
@@ -121,7 +121,7 @@ body {
    width: 2.1rem;
 }
 
-#replay{
+#replay, #random{
    background: transparent;
    border: none;
    border-radius: 50%;
@@ -129,14 +129,17 @@ body {
    transition: .3s;
 }
 
-#replay img {
+#replay img, #random img {
    height: 2rem; 
    cursor: pointer; 
    transition: .8s;
    background: transparent;
 }
 
+#random{padding-top: 2px;}
+
 #replay img:hover{transform: rotateZ(-200deg);}
+#random img:hover{transform: rotateX(180deg)}
 
 button{
    outline: none;
@@ -180,7 +183,7 @@ button{
    position: absolute;
 }
 
-.hamburger {
+/*.hamburger {
    position: absolute;
    top: 10px;
    left: 10px;
@@ -227,4 +230,10 @@ button{
 .toggler:checked + .hamburger > #line::after {
   top: 0;
   transform: rotate(90deg);
+}*/
+
+@media only screen and (max-width: 768px) {
+   .buttons{
+      width: 75%;
+   }
 }
