@@ -1,6 +1,7 @@
 const songs = [
     "media/Kendrick Lamar - Swimming Pools (Drank).mp3", 
     "media/Yung Lean - Gatorade.mp3", 
+    "media/Yung Lean - Highway Patrol (Feat. bladee).mp3",
     "media/It's Ok, You're Ok - Bonjr.mp3", 
     "media/Niki Kiniza - Gassed up.mp3", 
     "media/Post Malone - White Iverson.mp3",
@@ -14,6 +15,7 @@ const songs = [
 const poster = [
     'media/1.jpg', 
     'media/9.jpg', 
+    'media/11.jpg', 
     'media/2.jpg', 
     'media/3.png', 
     'media/4.jpg',
