@@ -118,7 +118,7 @@ function playSong () {
     let name = songs[currentSong].split(' - ');
     title.innerHTML = name[0].substring(6);
     author.innerHTML = name[1].replace('.mp3', '');  
-    //song.play(); 
+    song.play(); 
 }
 
 function playOrPause(){  
