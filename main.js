@@ -1,8 +1,14 @@
 const songs = [
-    "media/Kendrick Lamar - Swimming Pools (Drank).mp3", 
+    "media/Coolio - 𝒢𝒶𝓃𝑔𝒮𝓉𝒶𝓇'𝓈 𝓅𝒶𝓇𝒶𝒹𝒾𝓈𝑒.mp3",
+    "media/Lil Uzi Vert - XO Tour Llif3 (Official Visualiser).mp3",
+    "media/XXXTENTACION & Ski Mask The Slump God - WHAT IN XXXTARNATION!.mp3",
+    "media/XXXTENTACION - King Of The Dead.mp3",
+    "media/$UICIDEBOY$ - I NO LONGER FEAR THE RAZOR GUARDING MY HEEL.mp3",
+    "media/YTD - 40oz.mp3",
     "media/Yung Lean - Gatorade.mp3", 
     "media/Yung Lean - Highway Patrol (Feat. bladee).mp3",
     "media/It's Ok, You're Ok - Bonjr.mp3", 
+    "media/Kendrick Lamar - Swimming Pools (Drank).mp3", 
     "media/Niki Kiniza - Gassed up.mp3", 
     "media/Post Malone - White Iverson.mp3",
     "media/$UICIDEBOY$ - New Chains, Same Shackles.mp3",
@@ -13,10 +19,16 @@ const songs = [
 ];
 
 const poster = [
-    'media/1.jpg', 
+    "media/a.jpg",
+    'media/46157.png',
+    'media/0.jpg', 
+    'media/aa.jpg',
+    'media/12.png', 
+    'media/1.1.jpg', 
     'media/9.jpg', 
     'media/11.jpg', 
     'media/2.jpg', 
+    'media/1.jpg', 
     'media/3.png', 
     'media/4.jpg',
     'media/5.jpg',
@@ -105,8 +117,8 @@ function playSong () {
     song.src = songs[currentSong];
     let name = songs[currentSong].split(' - ');
     title.innerHTML = name[0].substring(6);
-    author.innerHTML = name[1].replace('.mp3', '');   
-    song.play();
+    author.innerHTML = name[1].replace('.mp3', '');  
+    //song.play(); 
 }
 
 function playOrPause(){  

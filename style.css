@@ -56,7 +56,7 @@ body {
 }
 
 .container {
-   background: rgba(75,0,130, .65);
+   background: rgba(75,0,130, .72);
    position: relative;
    padding-bottom: 15px;
    padding-top: 100px;
@@ -85,6 +85,44 @@ body {
    font-size: 1.1rem;
    z-index: 11;
    color: #dcdcdc;
+}
+
+.tooltip {
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   color: #dcdcdc;
+   font-size: 1.7rem;
+   font-weight: bold;
+   border: 2px solid #fff;
+   border-radius: 50%;
+   padding: 2px 13px;
+}
+ 
+.tooltip .tooltiptext {
+   opacity: 0;
+   width: 170px;
+   background-color: black;
+   color: #dcdcdc;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   position: absolute;
+   left: 50px;
+   top: -50px;
+   z-index: 1;
+   transition: 500ms;
+   font-size: 1.1rem;
+}
+ 
+.tooltip:hover .tooltiptext {
+   opacity: 1;
+   transition: 500ms;
+}
+
+.a {
+   font-weight: bold;
+   color: crimson;
 }
 
 .buttons {
@@ -183,54 +221,9 @@ button{
    position: absolute;
 }
 
-/*.hamburger {
-   position: absolute;
-   top: 10px;
-   left: 10px;
-   background: rgba(75,0,130, .55);
-   height: 50px;
-   width: 60px;
-   z-index: 11;
-   cursor: pointer;
+.dark{
+   background: rgba(0,0,0, .75);
 }
-
-#line {
-   position: relative;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   top: 50%;
-   height: 2px;
-   width: 35px;
-   background: #fff;
-}
-
-#line::after, #line::before{
-   content: '';
-   position: absolute;
-   top: -10px;
-   height: 2px;
-   width: 35px;
-   background: #fff;
-}
-
-#line::before{top: 10px;}
-
-.toggler{
-   position: absolute;
-   top: 10px;
-   left: 10px;
-   z-index: 2;
-   cursor: pointer;
-   width: 60px;
-   height: 50px;
-   opacity: 0;
-}
-
-.toggler:checked + .hamburger > #line::before,
-.toggler:checked + .hamburger > #line::after {
-  top: 0;
-  transform: rotate(90deg);
-}*/
 
 @media only screen and (max-width: 768px) {
    .buttons{
