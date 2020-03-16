@@ -43,12 +43,14 @@ const author = document.getElementById('song-author');
 let fillBar = document.getElementById('fill');
 const currentTime = document.getElementById('currentTime');
 
+
 document.getElementById('next').addEventListener('click', nextSong);
 document.getElementById('pre').addEventListener('click', preSong);
 document.getElementById('play').addEventListener('click', playOrPause);
 document.getElementById('replay').addEventListener('click', replaySong);
 document.getElementById('random').addEventListener('click', randomSong);
 document.getElementById('progress').addEventListener('click', updateBar);
+
 
 let currentSong = 0;
 document.onkeydown = function(e) {
@@ -67,16 +69,22 @@ document.onkeydown = function(e) {
         $("#play img").attr("src", "media/play.jpg");
     }
     if(e.keyCode == '38'){
-        nextSong()
+        nextSong();
     }
     if(e.keyCode == '40'){
-        preSong()
+        preSong();
     }
     if(e.keyCode == '82'){
-        replaySong()
+        replaySong();
     }
     if(e.keyCode == '84'){
-        randomSong()
+        randomSong();
+    }
+    if(e.keyCode == '109'){
+        decreaseVolume();
+    }
+    if(e.keyCode == '107'){
+        increaseVolume();
     }
 };
 
@@ -194,4 +202,12 @@ function updateBar(e){
         song.currentTime = newTime;
         fillBar.style.width = mouseX;       
     }
+}
+
+function increaseVolume() {
+    song.volume = song.volume + 0.02;
+}
+
+function decreaseVolume() {
+    song.volume = song.volume - 0.01;
 }
