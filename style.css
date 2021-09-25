@@ -18,7 +18,8 @@ body {
 .bg img {
    height: 110vh;
    width: 102%;
-   filter: blur(5px);
+   object-fit: cover;
+   filter: blur(5px) brightness(60%);
    position: absolute;
    top: 50%;
    left: 50%;
@@ -35,7 +36,7 @@ body {
 
 .main {
    position: absolute;
-   top: 40%;
+   top: 30%;
    left: 50%;
    transform: translate(-50%,-50%);
    z-index: 4;
@@ -43,8 +44,8 @@ body {
 
 .main img {
    height: 20vw;
+   min-height: 15rem;
    object-fit: cover;
-   border: 1px solid #dcdcdc;
 }
 
 .player {
@@ -52,14 +53,19 @@ body {
    z-index: 10;
    position: absolute;
    width: 100%;
-   bottom: 0%;left: 0;
+   bottom: 0%;
+   left: 0;
 }
 
 .container {
-   background: rgba(75,0,130, .72);
+   background: rgba(140, 140, 140, 0.3);
    position: relative;
    padding-bottom: 15px;
    padding-top: 100px;
+}
+
+.container:hover .tooltip {
+   opacity: 1;
 }
 
 #song-title {
@@ -71,7 +77,6 @@ body {
    color: #dcdcdc;
    font-size: 1.4rem;
    z-index: 11;
-   color: #dcdcdc;
 }
 
 #song-author{
@@ -81,23 +86,23 @@ body {
    top: 23%;
    width: 100%;
    text-align: center;
-   color: #dcdcdc;
+   color: #bebebe;
    font-size: 1.1rem;
    z-index: 11;
-   color: #dcdcdc;
 }
 
 /* TOOLTIPS */
 .tooltip {
+   opacity: 0;
    position: absolute;
    top: 15px;
    left: 15px;
    color: #dcdcdc;
-   font-size: 1.7rem;
+   font-size: 1.2rem;
    font-weight: bold;
-   border: 2px solid #fff;
+   border: 1px solid #fff;
    border-radius: 50%;
-   padding: 2px 13px;
+   padding: 2px 10px;
 }
  
 .tooltip .tooltiptext {
@@ -186,7 +191,7 @@ button{
 
 .progress-bar {
    width: 85%;
-   height: 3px;
+   height: 4px;
    background-color: #a5a5a5;
    display: flex;
    position: relative;
@@ -197,19 +202,20 @@ button{
 }
 
 #fill {
-   height: 3px;
-   background:#333;
+   height: 4px;
+   background: crimson;
 }
 
 #handle {
-   width: 5px;
-   height: 5px;
-   background: rgb(58, 58, 58);
+   width: 7px;
+   height: 7px;
+   background: crimson;
    border-radius: 50%;
-   margin-top: -1.5px;
+   box-shadow: 0 0 5px #000;
+   margin-top: -2px;
    margin-left: -2.5px;
    transform: scale(0);
-   transition: 600ms;
+   transition: 500ms;
 }
 
 .progress-bar:hover #handle{
